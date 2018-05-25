@@ -1,0 +1,36 @@
+<div class="col-md-8 col-md-offset-2">
+	<form (ngSubmit)="onSubmit(f)" #f="ngForm" ngNativeValidate>
+		<div class="form-group">
+			<label for="content">Content</label>
+			<input 
+				type="text" 
+				id="content" 
+				class="form-control"
+				ngModel
+				name="content"
+				required
+				> <!-- ngModel without brackets here says this input should be registered as a control of the form which was automatically derived by angular2-->
+		</div>
+		<button class="btn btn-primary" type="submit">Save</button>
+	</form>
+</div>
+
+
+
+<!--
+
+Old method to show use of local reference: #input, and input.value
+
+
+<div class="col-md-8 col-md-offset-2">
+	<form>
+		<div class="form-group">
+			<label for="content">Content</label>
+			<input type="text" id="content" class="form-control" #input>
+		</div>
+		<button class="btn btn-primary" type="submit" (click)="onSave(input.value)">Save</button>
+	</form>
+</div>
+
+
+-->

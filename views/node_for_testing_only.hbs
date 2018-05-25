@@ -1,0 +1,7 @@
+<h1>A NodeJS View</h1>
+<form action="/" method="post">
+	<!-- must use name="message" since in node used req.body.message in routes post handler -->
+	{{ email }}<br>
+	<input type="email" name="email">
+	<button type="submit">Submit</button>
+</form>
